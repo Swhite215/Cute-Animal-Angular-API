@@ -7,7 +7,9 @@ app.controller("displayController", function($scope, myRedditFactory, $timeout) 
   //ca// factory function to perform information request.
   $scope.makeAction = function() {
       myRedditFactory.requestInfo($scope.userInput);
-      $timeout( function(){ $scope.setInfo(); }, 4000);
+      $timeout( function(){
+         $scope.setInfo();
+       }, 500);
   }
 
   //function to set my requested info, in the form of an array, to a scope accessible array.

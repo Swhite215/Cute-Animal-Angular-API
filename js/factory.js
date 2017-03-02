@@ -5,8 +5,6 @@ app.factory("myRedditFactory", function($http) {
   var obj = {};
 
   //Include $http request here and save that information as obj*
-
-
   return {
     requestInfo: function(userInput) {
       console.log(userInput);
@@ -27,4 +25,5 @@ app.factory("myRedditFactory", function($http) {
       return obj;
     }
   }
+
 });

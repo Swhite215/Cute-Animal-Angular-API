@@ -9,7 +9,7 @@ app.controller("displayController", function($scope, myRedditFactory, $timeout) 
       myRedditFactory.requestInfo($scope.userInput);
       $timeout( function(){
          $scope.setInfo();
-       }, 500);
+       }, 1000);
   }
 
   //function to set my requested info, in the form of an array, to a scope accessible array.

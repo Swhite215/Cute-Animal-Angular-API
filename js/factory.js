@@ -7,8 +7,6 @@ app.factory("myRedditFactory", function($http) {
   //Include $http request here and save that information as obj*
   return {
     requestInfo: function(userInput) {
-      console.log(userInput);
-      console.log(typeof userInput);
       $http({
         url: "https://www.reddit.com/r/aww/search/.json?q=" + userInput + "&restrict_sr=on",
         method: 'GET'

@@ -15,7 +15,7 @@ app.controller("displayController", function($scope, myRedditFactory, $timeout) 
   //function to set my requested info, in the form of an array, to a scope accessible array.
   $scope.setInfo = function() {
     $scope.info = myRedditFactory.getInfo();
-    console.log($scope.info);
+    // console.log($scope.info);
     //confirmation of all the values I am seeking in each object.
     // console.log($scope.info[0].data.author);
     // console.log($scope.info[0].data.title);

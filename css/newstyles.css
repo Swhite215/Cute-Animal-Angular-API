@@ -2,9 +2,48 @@
 body {
   padding: 0;
   margin: 0;
+  background: #c2e59c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #c2e59c , #64b3f4);
+  background: linear-gradient(to left, #c2e59c , #64b3f4);
 }
 
+/* Search Styling */
+div.centerSearch {
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+h1 {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+
+button, input {
+  font-family: 'Indie Flower', cursive;
+}
+
+input.form-control, button.btn {
+  font-size: 22px;
+  line-height: 20px;
+}
+
+input.form-control {
+  background: #fcf8e3;
+}
+
+input.form-control:focus {
+  background: #EFEFBB; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #EFEFBB , #D4D3DD);
+  background: linear-gradient(to left, #EFEFBB , #D4D3DD);
+}
+
+button.btn {
+  background: #9696fd;
+  color: white;
+}
+/* Post Styling */
 div.post {
   width: 90%;
   height: 270px;
@@ -13,7 +52,7 @@ div.post {
   margin-bottom: 15px;
   margin-right: 5px;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   padding: 10px;
   padding-top: 20px;
   display: inline-block;
@@ -21,4 +60,22 @@ div.post {
   -webkit-box-shadow: 9px 8px 20px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 9px 8px 20px 0px rgba(0,0,0,0.75);
   box-shadow: 9px 8px 20px 0px rgba(0,0,0,0.75);
+  font-family: 'Indie Flower', cursive;
+}
+
+div.post h5 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+div.post button {
+  color: white;
+  background: #9696fd;
+}
+
+div.post button:hover, button.btn:hover {
+  border: 1px solid white;
+  background: #DA22FF; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #DA22FF , #9733EE);
+  background: linear-gradient(to left, #DA22FF , #9733EE);
+  color: white;
 }

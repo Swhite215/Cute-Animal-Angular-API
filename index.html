@@ -5,7 +5,7 @@
     <title>Cute Animals API</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Barrio|Nunito+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="css/newstyles.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js">
     </script>
@@ -16,9 +16,11 @@
   <body ng-app="myModule">
     <div class="container-fluid" ng-controller="displayController">
       <h1 id="title">Gotcha Cutie Animal Search</h1>
-      <label for="animal Input">
-          <input type="text" name="" value="" placeholder="Search for a Cute Animal" ng-model="userInput" class="form-control"></label>
-          <button class="btn" type="button" name="button" ng-click="makeRequest()">Submit</button>
+      <div class="centerSearch">
+        <label for="animal Input">
+            <input type="text" name="" value="" placeholder="Search for a Cute Animal" ng-model="userInput" class="form-control"></label>
+            <button class="btn" type="button" name="button" ng-click="makeRequest()">Submit</button>
+      </div>
         <hr>
 
       <div class="postContainer">
@@ -27,7 +29,7 @@
             <img src="{{post.data.thumbnail}}" alt="">
             <h5>"{{post.data.title.substring(0, 50)}}"</h5>
             <h6>Author: {{post.data.author}}</h6>
-            <a href="https://www.reddit.com/{{post.data.permalink}}" target="_blank"><button type="button" name="button">Visit Me!</button></a>
+            <a href="https://www.reddit.com/{{post.data.permalink}}" target="_blank"><button type="button" name="button" class="btn">Visit Me!</button></a>
           </div>
         </div>
       </div>

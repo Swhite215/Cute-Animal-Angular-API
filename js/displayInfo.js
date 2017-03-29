@@ -11,7 +11,7 @@ app.controller("displayController", function($scope, myRedditFactory, $timeout) 
         console.log($scope.info[0].data.author);
         console.log($scope.info[0].data.title);
         console.log($scope.info[0].data.url);
-        console.log($scope.info[0].data.preview.images[0].source.url);
+        console.log($scope.info[0].data.thumbnail);
       });
   }
 

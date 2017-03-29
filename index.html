@@ -3,25 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Cute Animals API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Barrio|Nunito+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newstyles.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js">
     </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 
   <body ng-app="myModule">
-    <div class="container" ng-controller="displayController">
+    <div class="container-fluid" ng-controller="displayController">
       <h1 id="title">Gotcha Cutie Animal Search</h1>
       <label for="animal Input">
-          <input type="text" name="" value="" placeholder="Search for a Cute Animal" ng-model="userInput"></label>
-          <button type="button" name="button" ng-click="makeRequest()">Submit</button>
+          <input type="text" name="" value="" placeholder="Search for a Cute Animal" ng-model="userInput" class="form-control"></label>
+          <button class="btn" type="button" name="button" ng-click="makeRequest()">Submit</button>
         <hr>
 
-      <div class="postContainer" ng-repeat="post in info">
-        <img src="{{post.data.url + '.jpg'}}" alt="">
-        <h2>Title: {{post.data.title.substring(0, 100)}}</h2>
-        <h3>Author: {{post.data.author}}</h2>
-        <a href="https://www.reddit.com/{{post.data.permalink}}" target="_blankz"><button type="button" name="button">Visit Me!</button></a>
+      <div class="postContainer">
+        <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="post in info">
+          <div class="post">
+            <img src="{{post.data.thumbnail}}" alt="">
+            <h5>"{{post.data.title.substring(0, 50)}}"</h5>
+            <h6>Author: {{post.data.author}}</h6>
+            <a href="https://www.reddit.com/{{post.data.permalink}}" target="_blank"><button type="button" name="button">Visit Me!</button></a>
+          </div>
+        </div>
       </div>
     </div>
 

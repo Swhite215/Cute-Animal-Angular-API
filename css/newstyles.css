@@ -1,0 +1,24 @@
+/* Global Styling */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+div.post {
+  width: 90%;
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  padding-top: 20px;
+  display: inline-block;
+  float: left;
+  -webkit-box-shadow: 9px 8px 20px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 9px 8px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 9px 8px 20px 0px rgba(0,0,0,0.75);
+}

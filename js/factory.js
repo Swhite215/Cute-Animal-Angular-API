@@ -6,22 +6,24 @@ app.factory("myRedditFactory", function($http) {
 
   //Include $http request here and save that information as obj*
   return {
-    requestInfo: function(userInput) {
-      $http({
-        url: "https://www.reddit.com/r/aww/search/.json?q=" + userInput + "&restrict_sr=on",
-        method: 'GET'
-      }).then(function successfulCallback(response) {
-        //set Factory object equal to array of responses.
-        obj = response.data.data.children;
-        console.log(obj);
-      }, function(error) {
-        console.log(error);
-      });
-    },
-    getInfo: function() {
-      console.log(obj);
-      return obj;
-    }
+    requestInfo: requestInfo,
+    getInfo: getInfo
+  }
+
+  function requestInfo(userInput) {
+    var promise = $http({
+      url: "https://www.reddit.com/r/aww/search/.json?q=" + userInput + "&restrict_sr=on",
+      method: 'GET'
+    }).then(function successfulCallback(response) {
+      obj = response.data.data.children;
+    }, function(error) {
+      console.log(error);
+    });
+    return promise;
+  }
+
+  function getInfo() {
+    return obj;
   }
 
 });

@@ -2,7 +2,7 @@
 Cute Animal Search Angular API
 
 ## Description: 
-Use of $http get method within Angular factory to query and display searched animals from Reddit API.
+Bootstrap Design with Practice $HTTP request
 
 ## Tools: 
-HTML, CSS, AngularJS, Reddit API
+HTML, CSS, AngularJS, Bootstrap, Reddit API
